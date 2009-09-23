@@ -1,0 +1,27 @@
+<def tag="show-page-new">
+	<show-page merge>
+		<content-body:>
+			<h2>Title:</h2>
+			<view:title/><br/>
+			<h2>Recipe:</h2>
+			<view:body/>
+			<h2>Categories:</h2>
+			<view:categories/>
+			<h2>Country:</h2>
+			<view:country/>
+		</content-body:>
+	</show-page>
+</def>
+<show-page-new/>
+
+
+
+
+
+
+
+
+
+
+
+

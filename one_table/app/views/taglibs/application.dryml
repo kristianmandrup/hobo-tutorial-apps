@@ -1,0 +1,16 @@
+<include src="rapid" plugin="hobo"/>
+
+<include src="taglibs/auto/rapid/cards"/>
+<include src="taglibs/auto/rapid/pages"/>
+<include src="taglibs/auto/rapid/forms"/>
+
+<set-theme name="clean"/>
+
+<def tag="app-name">One Table</def>
+
+<def tag="main-nav"> 
+ <navigation class="main-nav" merge-attrs> 
+  <nav-item href="#{base_url}/">Home</nav-item> 
+  <nav-item with="&Recipe">My Recipes</nav-item> 
+ </navigation>
+</def>

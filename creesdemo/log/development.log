@@ -1,0 +1,1178 @@
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to HoboMigration1 (20090921142702)
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crypted_password" varchar(40), "salt" varchar(40), "remember_token" varchar(255), "remember_token_expires_at" datetime, "name" varchar(255), "email_address" varchar(255), "administrator" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime, "state" varchar(255) DEFAULT 'active', "key_timestamp" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090921142702')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:30:55) [GET]
+Rendering front/index
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/core.dryml in 0.02s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_core.dryml in 0.17s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_pages.dryml in 0.16s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_editing.dryml in 0.13s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_forms.dryml in 0.28s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_navigation.dryml in 0.04s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_plus.dryml in 0.13s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid.dryml in 1.13s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.06s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.10s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.33s
+  DRYML: Compiled app/views/front/index.dryml in 1.39s
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 1491ms (View: 1482, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:33:07) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/application.dryml in 0.09s
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 176ms (View: 110, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:35:28) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 111ms (View: 106, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:37:59) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 105ms (View: 102, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 16:38:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/banner_csrees.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:38:03) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 165ms (View: 162, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 16:38:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/banner_csrees.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:38:21) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 166ms (View: 162, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:39:43) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/application.dryml in 0.17s
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 192ms (View: 188, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:40:49) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 129ms (View: 125, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:41:18) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 107ms (View: 104, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:41:30) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 114ms (View: 110, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:41:57) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 112ms (View: 107, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:42:33) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 176ms (View: 172, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:43:04) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 184ms (View: 180, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:43:51) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 178ms (View: 175, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:50:02) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/application.dryml in 0.10s
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 119ms (View: 116, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:50:08) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 110ms (View: 105, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:50:51) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/front/index.dryml in 0.09s
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 110ms (View: 107, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:52:14) [GET]
+Rendering front/index
+
+ActionView::TemplateError (File: app/views/front/index.dryml
+#<RuntimeError: Illegal character '&' in raw string "Agricultural & Food Biosecurity">
+/opt/local/lib/ruby/1.8/rexml/text.rb:91:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/tree_parser.rb:43:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/tree_parser.rb:43:in `parse'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/document.rb:50:in `build'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/document.rb:25:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:93:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:93:in `process_src'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:81:in `create_render_page_method'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:65:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:158:in `compile_renderer_class'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:144:in `make_renderer_class'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:97:in `page_renderer'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:63:in `page_renderer_for_template'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:19:in `render_for_rails22'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:141:in `render_dryml'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:301:in `with_template'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:137:in `render_dryml'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:105:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file_without_dryml'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:82:in `render_for_file'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:638:in `run_before_filters'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/controller.rb:22:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/controller.rb:22:in `included_in_class'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/callbacks.rb:182:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/callbacks.rb:182:in `evaluate_method'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:184:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:635:in `run_before_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:615:in `call_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+...
+Illegal character '&' in raw string "Agricultural & Food Biosecurity"
+Line: 25
+Position: 0
+Last 80 unconsumed characters:
+</nav-item>          <nav-item href="/">Agricultural Systems</nav-item>          ) in app/views/front/index.dryml:
+
+    hobo (0.8.8) lib/hobo/dryml/parser/document.rb:28:in `initialize'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:93:in `new'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:93:in `process_src'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:81:in `create_render_page_method'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:65:in `compile'
+    hobo (0.8.8) lib/hobo/dryml.rb:158:in `compile_renderer_class'
+    hobo (0.8.8) lib/hobo/dryml.rb:144:in `make_renderer_class'
+    hobo (0.8.8) lib/hobo/dryml.rb:97:in `page_renderer'
+    hobo (0.8.8) lib/hobo/dryml.rb:63:in `page_renderer_for_template'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:19:in `render_for_rails22'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:141:in `render_dryml'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:137:in `render_dryml'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:105:in `render'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:82:in `render_for_file'
+    hobo (0.8.8) lib/hobo/controller.rb:22:in `call'
+    hobo (0.8.8) lib/hobo/controller.rb:22:in `included_in_class'
+
+Rendered rescues/_trace (104.7ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:52:34) [GET]
+Rendering front/index
+
+ActionView::TemplateError (File: app/views/taglibs/application.dryml
+#<RuntimeError: Illegal character '&' in raw string "Agricultural & Food Biosecurity">
+/opt/local/lib/ruby/1.8/rexml/text.rb:91:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/tree_parser.rb:43:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/tree_parser.rb:43:in `parse'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/document.rb:50:in `build'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/document.rb:25:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:93:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:93:in `process_src'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:63:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/taglib.rb:98:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/taglib.rb:60:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/taglib.rb:20:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/taglib.rb:20:in `get'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/dryml_builder.rb:124:in `import_taglib'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/dryml_builder.rb:76:in `build'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/dryml_builder.rb:76:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/dryml_builder.rb:76:in `build'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:74:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:158:in `compile_renderer_class'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:144:in `make_renderer_class'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:97:in `page_renderer'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:63:in `page_renderer_for_template'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:19:in `render_for_rails22'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:141:in `render_dryml'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:301:in `with_template'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:137:in `render_dryml'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:105:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file_without_dryml'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:82:in `render_for_file'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:638:in `run_before_filters'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/controller.rb:22:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/controller.rb:22:in `included_in_class'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/callbacks.rb:182:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/callbacks.rb:182:in `evaluate_method'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:184:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:635:in `run_before_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:615:in `call_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+...
+Illegal character '&' in raw string "Agricultural & Food Biosecurity"
+Line: 45
+Position: 0
+Last 80 unconsumed characters:
+</nav-item>          <nav-item href="/">Agricultural Systems</nav-item>          ) in app/views/front/index.dryml:
+
+    hobo (0.8.8) lib/hobo/dryml/parser/document.rb:28:in `initialize'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:93:in `new'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:93:in `process_src'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:63:in `compile'
+    hobo (0.8.8) lib/hobo/dryml/taglib.rb:98:in `load'
+    hobo (0.8.8) lib/hobo/dryml/taglib.rb:60:in `initialize'
+    hobo (0.8.8) lib/hobo/dryml/taglib.rb:20:in `new'
+    hobo (0.8.8) lib/hobo/dryml/taglib.rb:20:in `get'
+    hobo (0.8.8) lib/hobo/dryml/dryml_builder.rb:124:in `import_taglib'
+    hobo (0.8.8) lib/hobo/dryml/dryml_builder.rb:76:in `build'
+    hobo (0.8.8) lib/hobo/dryml/dryml_builder.rb:76:in `each'
+    hobo (0.8.8) lib/hobo/dryml/dryml_builder.rb:76:in `build'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:74:in `compile'
+    hobo (0.8.8) lib/hobo/dryml.rb:158:in `compile_renderer_class'
+    hobo (0.8.8) lib/hobo/dryml.rb:144:in `make_renderer_class'
+    hobo (0.8.8) lib/hobo/dryml.rb:97:in `page_renderer'
+    hobo (0.8.8) lib/hobo/dryml.rb:63:in `page_renderer_for_template'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:19:in `render_for_rails22'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:141:in `render_dryml'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:137:in `render_dryml'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:105:in `render'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:82:in `render_for_file'
+    hobo (0.8.8) lib/hobo/controller.rb:22:in `call'
+    hobo (0.8.8) lib/hobo/controller.rb:22:in `included_in_class'
+
+Rendered rescues/_trace (48.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:54:44) [GET]
+Rendering front/index
+
+ActionView::TemplateError (File: app/views/taglibs/application.dryml
+#<REXML::ParseException: Missing end tag for 'div' (line 29) (got "def")
+Line: 55
+Position: 0
+Last 80 unconsumed characters:
+</dryml_page>>
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/base_parser.rb:172:in `pull'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/tree_parser.rb:16:in `parse'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/document.rb:50:in `build'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/parser/document.rb:25:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:93:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:93:in `process_src'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:63:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/taglib.rb:98:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/taglib.rb:60:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/taglib.rb:20:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/taglib.rb:20:in `get'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/dryml_builder.rb:124:in `import_taglib'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/dryml_builder.rb:76:in `build'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/dryml_builder.rb:76:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/dryml_builder.rb:76:in `build'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template.rb:74:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:158:in `compile_renderer_class'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:144:in `make_renderer_class'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:97:in `page_renderer'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml.rb:63:in `page_renderer_for_template'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:19:in `render_for_rails22'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:141:in `render_dryml'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:301:in `with_template'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:137:in `render_dryml'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:105:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file_without_dryml'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/dryml/template_handler.rb:82:in `render_for_file'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:638:in `run_before_filters'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/controller.rb:22:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/lib/hobo/controller.rb:22:in `included_in_class'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/callbacks.rb:182:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/callbacks.rb:182:in `evaluate_method'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:184:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:635:in `run_before_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:615:in `call_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/opt/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Users/kristianconsult/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+...
+Missing end tag for 'div' (line 29) (got "def")
+Line: 55
+Position: 0
+Last 80 unconsumed characters:
+</dryml_page>
+Line: 55
+Position: 0
+Last 80 unconsumed characters:
+</dryml_page>) in app/views/front/index.dryml:
+
+    hobo (0.8.8) lib/hobo/dryml/parser/document.rb:28:in `initialize'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:93:in `new'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:93:in `process_src'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:63:in `compile'
+    hobo (0.8.8) lib/hobo/dryml/taglib.rb:98:in `load'
+    hobo (0.8.8) lib/hobo/dryml/taglib.rb:60:in `initialize'
+    hobo (0.8.8) lib/hobo/dryml/taglib.rb:20:in `new'
+    hobo (0.8.8) lib/hobo/dryml/taglib.rb:20:in `get'
+    hobo (0.8.8) lib/hobo/dryml/dryml_builder.rb:124:in `import_taglib'
+    hobo (0.8.8) lib/hobo/dryml/dryml_builder.rb:76:in `build'
+    hobo (0.8.8) lib/hobo/dryml/dryml_builder.rb:76:in `each'
+    hobo (0.8.8) lib/hobo/dryml/dryml_builder.rb:76:in `build'
+    hobo (0.8.8) lib/hobo/dryml/template.rb:74:in `compile'
+    hobo (0.8.8) lib/hobo/dryml.rb:158:in `compile_renderer_class'
+    hobo (0.8.8) lib/hobo/dryml.rb:144:in `make_renderer_class'
+    hobo (0.8.8) lib/hobo/dryml.rb:97:in `page_renderer'
+    hobo (0.8.8) lib/hobo/dryml.rb:63:in `page_renderer_for_template'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:19:in `render_for_rails22'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:141:in `render_dryml'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:137:in `render_dryml'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:105:in `render'
+    hobo (0.8.8) lib/hobo/dryml/template_handler.rb:82:in `render_for_file'
+    hobo (0.8.8) lib/hobo/controller.rb:22:in `call'
+    hobo (0.8.8) lib/hobo/controller.rb:22:in `included_in_class'
+
+Rendered rescues/_trace (111.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:55:26) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/application.dryml in 0.18s
+  DRYML: Compiled app/views/front/index.dryml in 0.19s
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 204ms (View: 201, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:55:30) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 107ms (View: 103, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:56:11) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/application.dryml in 0.17s
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 191ms (View: 187, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:57:13) [GET]
+Rendering front/index
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/core.dryml in 0.01s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_core.dryml in 0.15s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_document_tags.dryml in 0.02s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_pages.dryml in 0.15s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_editing.dryml in 0.13s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_forms.dryml in 0.18s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_navigation.dryml in 0.03s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_plus.dryml in 0.12s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_generics.dryml in 0.04s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid.dryml in 0.84s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.13s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.05s
+  DRYML: Compiled app/views/front/index.dryml in 1.07s
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 1221ms (View: 1219, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:58:29) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/front/index.dryml in 0.09s
+Completed in 97ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:58:50) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/front/index.dryml in 0.09s
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 117ms (View: 113, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 16:59:41) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 109ms (View: 105, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:03:05) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 163ms (View: 159, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:12:19) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/application.dryml in 0.18s
+  DRYML: Compiled app/views/front/index.dryml in 0.20s
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 223ms (View: 220, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:13:59) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/front/index.dryml in 0.10s
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 181ms (View: 177, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:15:30) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/application.dryml in 0.19s
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 220ms (View: 217, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:15:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:19:34) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 118ms (View: 115, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:19:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:19:46) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 172ms (View: 169, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:19:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:20:04) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 173ms (View: 169, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:20:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:20:11) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 170ms (View: 166, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:20:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:20:16) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 116ms (View: 112, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:20:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:20:22) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 116ms (View: 112, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:20:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:20:29) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 117ms (View: 114, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:20:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:20:36) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 171ms (View: 168, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:20:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:23:16) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 194ms (View: 191, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:23:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:23:34) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 170ms (View: 167, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (4.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:23:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:23:52) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 116ms (View: 113, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:23:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:24:06) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 117ms (View: 113, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:24:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:24:41) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 119ms (View: 115, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:24:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:25:13) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 172ms (View: 169, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:25:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-21 17:25:48) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 172ms (View: 169, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 17:25:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/footer_corner_left.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

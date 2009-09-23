@@ -1,0 +1,181 @@
+html, body { background:#A8ACB6 } 
+body { width: 766px; } 
+ 
+div.page-header { 
+    padding: 0;  
+    background: white url(../images/banner_photo.jpg) no-repeat 0px 62px; 
+    height: 138px; 
+} 
+ 
+div.page-header h1.app-name { 
+    text-indent: -10000px; 
+    background: url(../images/banner_csrees.gif) no-repeat; 
+    padding: 0; margin: 0; 
+    height: 62px; 
+} 
+ 
+div.page-header .main-nav { 
+    position: relative; 
+	top: 43px; 
+    height: 21px; 
+	width: 100%; 
+	line-height: 21px; 
+	padding: 0;  
+    text-align: right;  
+    background: #313367;  
+} 
+ 
+div.page-header .main-nav li { 
+    margin: 0; 
+	padding: 0 0 0 4px; 
+    display:inline; 
+	float:none; 
+    border-left: 1px dotted #eee; 
+	background: #313367; 
+    color: silver; 	
+} 
+ 
+div.page-header .navigation.main-nav li a { 
+    padding: 3px 8px; 
+	margin: 0; 
+    font-weight: normal; 
+	display:inline; 
+	font-size: 12px; 
+    background: #313367;
+    color: silver; 	
+} 
+
+div.page-header .navigation.main-nav li.current a {
+    background: #313367;
+    color: white; 	
+}
+ 
+div.page-header .navigation.main-nav li a:hover { 
+	background: yellow;  	
+    color: black; 		
+}
+
+div.page-content, div.page-content .aside { 
+	background: white; 
+} 
+ 
+.aside1 { 
+	width: 173px; 
+	padding: 10px;
+} 
+ 
+.search-and-browse { 
+    background: #A9BACF; 
+    border: 1px solid #313367; 
+    font-size: 11px; 
+    margin: 4px; 
+} 
+ 
+.search-and-browse h3 { 
+    background: #313367; 
+	color: white; 
+    margin: 0; 
+	padding: 3px 5px; 
+    font-weight: normal; 
+	font-size: 13px;  
+} 
+ 
+.search-and-browse a { 
+	background: none; 
+	color: #000483;
+} 
+ 
+.search-and-browse .navigation { 
+	list-style-type: circle; 
+} 
+
+.search-and-browse .navigation li { 
+	padding: 3px 0; 
+	font-size: 11px; 
+	line-height: 14px;
+} 
+.search-and-browse .navigation li a { 
+	border:none;
+} 
+ 
+.search-and-browse .search form { 
+	margin: 0 3px 3px 3px;
+} 
+.search-and-browse .search p { 
+	margin: 3px;
+} 
+.search-and-browse .search-field { 
+	width: 120px;
+} 
+.search-and-browse .submit-button { 
+	padding: 2px;
+} 
+ 
+.search-and-browse .browse-by-audience select { 
+	margin: 5px 3px; 
+	width: 92%;
+} 
+
+ 
+.aside2 { 
+	margin: 0; 
+	padding: 12px 10px; 
+	width: 182px;
+} 
+
+.nav-panel {
+	border: 1px solid #C9C9C9; 
+	margin-bottom: 10px;
+} 
+
+.nav-panel h3 {
+	background:#A9BACF; 
+	color: #313131; 
+	font-size: 13px; 
+	padding: 3px 8px; 
+	margin: 0;
+} 
+
+.nav-panel .body {
+	background: #DAE4ED; 
+	color: #00059A; 
+	padding: 5px;
+} 
+
+.nav-panel .body a {
+	color: #00059A; 
+	background: none;
+} 
+
+.nav-panel ul {
+	list-style-type: circle;
+} 
+
+.nav-panel ul li { 
+	margin: 5px 0 5px 20px;
+}
+
+.page-footer { 
+    background: white url(../images/footer_corner_left.gif) no-repeat bottom left; 
+    overflow: hidden; 
+	height: 100%; 
+    border-top: 1px solid #B8B8B8; 
+    font-size: 10px; 
+	line-height: 10px; 
+    padding: 5px 0 15px 20px; 
+} 
+ 
+.page-footer ul { 
+	list-style-type: none; 
+} 
+.page-footer ul li { 
+	float: left; 
+	border-right: 1px solid #2A049A; 
+	margin: 0; 
+	padding: 0 5px;
+} 
+
+.page-footer ul li a {
+	border:none; 
+	color: #2A049A;
+}

@@ -1,0 +1,34 @@
+<def tag="messages">
+	<br/><br/>
+	<ul>
+		<li param="msg1">Message 1</li>
+		<li param="msg2">Message 2</li>
+		<li param="msg3">Message 3</li>
+	</ul>
+</def>
+
+<def tag="bd-it">
+    <br/>
+    <b><i><span param="default">stuff</span></i></b>
+</def>
+
+<page title="Home">
+	<body: class="front-page"/>
+   <content:>
+    <header class="content-header">
+      <h1>Welcome to <app-name/></h1>
+      <section class="welcome-message">
+        <h3>Congratulations! Your Hobo Rails App is up and running</h3>
+       <br/><h4>
+         <a to="&Country" action="index" >List My Countries</a><br/>
+       </h4>
+       <a to="&Country" action="new" >New Country</a><br/>
+	  </section>
+    </header>
+
+    <section class="content-body">
+
+    </section>
+  </content:>
+
+</page>

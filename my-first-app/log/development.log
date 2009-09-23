@@ -1,0 +1,611 @@
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to HoboMigration1 (20090914100859)
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crypted_password" varchar(40), "salt" varchar(40), "remember_token" varchar(255), "remember_token_expires_at" datetime, "name" varchar(255), "email_address" varchar(255), "administrator" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime, "state" varchar(255) DEFAULT 'active', "key_timestamp" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090914100859')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-14 12:11:52) [GET]
+Rendering front/index
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/core.dryml in 0.01s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_core.dryml in 0.09s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_support.dryml in 0.06s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_pages.dryml in 0.15s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_editing.dryml in 0.04s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_forms.dryml in 0.18s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_navigation.dryml in 0.08s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_plus.dryml in 0.06s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid.dryml in 0.77s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.12s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.02s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 0.94s
+  DRYML: Compiled app/views/front/index.dryml in 0.97s
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 1000ms (View: 993, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2009-09-14 12:12:00) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_user_pages.dryml in 0.15s
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 359ms (View: 355, DB: 1) | 200 OK [http://localhost/users/signup]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#do_signup (for 127.0.0.1 at 2009-09-14 12:12:19) [POST]
+  Parameters: {"page_path"=>"users/signup", "action"=>"do_signup", "authenticity_token"=>"HEUfq3FheB3em93/0y1fJ556pREdxxD4ZT2VGavLF/U=", "controller"=>"users", "user"=>{"name"=>"kristian", "password_confirmation"=>"[FILTERED]", "email_address"=>"kr@ma.dk", "password"=>"[FILTERED]"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'kristian') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email_address") = 'kr@ma.dk') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO "users" ("salt", "name", "key_timestamp", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "administrator", "remember_token", "email_address", "state") VALUES('7044f34f499af5df7b42b8180973122d64030f30', 'kristian', NULL, '2009-09-14 10:12:19', '19cafea4a528983f3647cf27c36d7bdf72767771', NULL, '2009-09-14 10:12:19', 't', NULL, 'kr@ma.dk', 'active')[0m
+Redirected to http://localhost:3000
+Completed in 208ms (DB: 1) | 302 Found [http://localhost/users/signup]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-14 12:12:20) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering front/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 175ms (View: 172, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-14 12:12:21) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 100ms (View: 97, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#search (for 127.0.0.1 at 2009-09-14 12:12:25) [GET]
+  Parameters: {"query"=>"kris"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ((name like '%kris%')) [0m
+Completed in 93ms (View: 1, DB: 1) | 200 OK [http://localhost/search?query=kris]
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-14 12:12:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"1-kristian", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 126ms (View: 122, DB: 2) | 200 OK [http://localhost/users/1-kristian]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Hobo::DevController#set_current_user (for 127.0.0.1 at 2009-09-14 12:13:19) [GET]
+  Parameters: {"login"=>""}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email_address" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/users/1-kristian
+Completed in 29ms (DB: 1) | 302 Found [http://localhost/dev/set_current_user?login=]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-14 12:13:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"1-kristian", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 183ms (View: 179, DB: 1) | 200 OK [http://localhost/users/1-kristian]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2009-09-14 12:13:24) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 180ms (View: 100, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to HoboMigration1 (20090914100859)
+Migrating to HoboMigration2 (20090914103527)
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "company" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090914103527')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("contacts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-09-14 12:42:29) [GET]
+  [4;35;1mContact Load (0.2ms)[0m   [0mSELECT * FROM "contacts" LIMIT 30 OFFSET 0[0m
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/core.dryml in 0.02s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_core.dryml in 0.15s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_document_tags.dryml in 0.02s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_pages.dryml in 0.15s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_editing.dryml in 0.04s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_forms.dryml in 0.24s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_navigation.dryml in 0.03s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_plus.dryml in 0.05s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_lifecycles.dryml in 0.06s
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid.dryml in 0.79s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.17s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.02s
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 1077ms (View: 1068, DB: 1) | 200 OK [http://localhost/contacts]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#login (for 127.0.0.1 at 2009-09-14 12:44:21) [GET]
+  Parameters: {"action"=>"login", "controller"=>"users"}
+  DRYML: Compiled /opt/local/lib/ruby/gems/1.8/gems/hobo-0.8.8/taglibs/rapid_user_pages.dryml in 0.15s
+Completed in 285ms (View: 281, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#login (for 127.0.0.1 at 2009-09-14 12:44:28) [POST]
+  Parameters: {"remember_me"=>"on", "page_path"=>"users/login", "action"=>"login", "authenticity_token"=>"ZOGlrMa7P4cYMbyoAF1GsOHQPXS6HZOKozB5m+lbMiU=", "controller"=>"users", "login"=>"kris", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (email_address = 'kris') LIMIT 1[0m
+Completed in 170ms (View: 166, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#login (for 127.0.0.1 at 2009-09-14 12:44:35) [GET]
+  Parameters: {"action"=>"login", "controller"=>"users"}
+Completed in 122ms (View: 119, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-09-14 12:44:38) [GET]
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 183ms (View: 179, DB: 1) | 200 OK [http://localhost/contacts]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Hobo::DevController#set_current_user (for 127.0.0.1 at 2009-09-14 12:44:42) [GET]
+  Parameters: {"login"=>"kr@ma.dk"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email_address" = 'kr@ma.dk') LIMIT 1[0m
+Redirected to http://localhost:3000/contacts
+Completed in 30ms (DB: 1) | 302 Found [http://localhost/dev/set_current_user?login=kr@ma.dk]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2009-09-14 12:44:42) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.1ms)[0m   [0;1mSELECT * FROM "contacts" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 171ms (View: 168, DB: 1) | 200 OK [http://localhost/contacts]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2009-09-14 12:44:45) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 186ms (View: 183, DB: 1) | 200 OK [http://localhost/contacts/new]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2009-09-14 12:44:56) [POST]
+  Parameters: {"page_path"=>"contacts/new", "authenticity_token"=>"ZOGlrMa7P4cYMbyoAF1GsOHQPXS6HZOKozB5m+lbMiU=", "contact"=>{"company"=>"Someplace", "name"=>"kristian"}}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mContact Create (0.7ms)[0m   [0mINSERT INTO "contacts" ("name", "company", "created_at", "updated_at") VALUES('kristian', 'Someplace', '2009-09-14 10:44:56', '2009-09-14 10:44:56')[0m
+Redirected to http://localhost:3000/contacts/1-kristian
+Completed in 90ms (DB: 1) | 302 Found [http://localhost/contacts]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2009-09-14 12:44:56) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 175ms (View: 172, DB: 2) | 200 OK [http://localhost/contacts/1-kristian]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to HoboMigration1 (20090914100859)
+Migrating to HoboMigration2 (20090914103527)
+Migrating to HoboMigration3 (20090914104727)
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "contacts" ADD "address_1" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "contacts" ADD "address_2" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "contacts" ADD "city" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "contacts" ADD "state" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "contacts" ADD "date_met" date[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "contacts" ADD "married" boolean[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "contacts" ADD "age" integer[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "contacts" ADD "notes" text[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090914104727')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("contacts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2009-09-14 12:47:41) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.17s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 393ms (View: 389, DB: 1) | 200 OK [http://localhost/contacts/1-kristian]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#edit (for 127.0.0.1 at 2009-09-14 12:47:47) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.4ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 391ms (View: 385, DB: 2) | 200 OK [http://localhost/contacts/1-kristian/edit]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("contacts")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to HoboMigration1 (20090914100859)
+Migrating to HoboMigration2 (20090914103527)
+Migrating to HoboMigration3 (20090914104727)
+Migrating to DropContactAdr2 (20090914104833)
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "company" varchar(255), "created_at" datetime, "updated_at" datetime, "address_1" varchar(255), "address_2" varchar(255), "city" varchar(255), "state" varchar(255), "date_met" date, "married" boolean, "age" integer, "notes" text) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("contacts")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDROP TABLE "contacts"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "company" varchar(255), "created_at" datetime, "updated_at" datetime, "address_1" varchar(255), "city" varchar(255), "state" varchar(255), "date_met" date, "married" boolean, "age" integer, "notes" text) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("altered_contacts")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "altered_contacts"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090914104833')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("contacts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#edit (for 127.0.0.1 at 2009-09-14 12:50:22) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.17s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 492ms (View: 488, DB: 1) | 200 OK [http://localhost/contacts/1-kristian/edit]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#edit (for 127.0.0.1 at 2009-09-14 12:51:15) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 293ms (View: 289, DB: 1) | 200 OK [http://localhost/contacts/1-kristian/edit]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#edit (for 127.0.0.1 at 2009-09-14 12:51:23) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 294ms (View: 291, DB: 1) | 200 OK [http://localhost/contacts/1-kristian/edit]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#edit (for 127.0.0.1 at 2009-09-14 12:51:57) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 296ms (View: 292, DB: 1) | 200 OK [http://localhost/contacts/1-kristian/edit]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2009-09-14 12:52:04) [PUT]
+  Parameters: {"page_path"=>"contacts/edit", "authenticity_token"=>"ZOGlrMa7P4cYMbyoAF1GsOHQPXS6HZOKozB5m+lbMiU=", "contact"=>{"date_met"=>{"month"=>"9", "day"=>"14", "year"=>"2009"}, "city"=>"", "company"=>"Someplace", "name"=>"", "married"=>"0", "notes"=>"", "address_1"=>"", "age"=>"", "state"=>""}, "id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+Rendering contacts/edit
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 304ms (View: 293, DB: 1) | 200 OK [http://localhost/contacts/1-kristian]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2009-09-14 12:52:13) [PUT]
+  Parameters: {"page_path"=>"contacts/edit", "authenticity_token"=>"ZOGlrMa7P4cYMbyoAF1GsOHQPXS6HZOKozB5m+lbMiU=", "contact"=>{"date_met"=>{"month"=>"9", "day"=>"14", "year"=>"2009"}, "city"=>"", "company"=>"Someplace", "name"=>"Kristian", "married"=>"0", "notes"=>"", "address_1"=>"", "age"=>"", "state"=>""}, "id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mContact Update (0.3ms)[0m   [0mUPDATE "contacts" SET "updated_at" = '2009-09-14 10:52:13', "city" = '', "date_met" = '2009-09-14', "name" = 'Kristian', "notes" = '', "married" = 'f', "state" = '', "address_1" = '' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/contacts/1-kristian
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/contacts/1]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2009-09-14 12:52:14) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 131ms (View: 127, DB: 2) | 200 OK [http://localhost/contacts/1-kristian]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2009-09-14 12:54:53) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 190ms (View: 186, DB: 1) | 200 OK [http://localhost/contacts/1-kristian]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#edit (for 127.0.0.1 at 2009-09-14 12:54:57) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 298ms (View: 293, DB: 1) | 200 OK [http://localhost/contacts/1-kristian/edit]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2009-09-14 12:55:12) [PUT]
+  Parameters: {"page_path"=>"contacts/edit", "authenticity_token"=>"ZOGlrMa7P4cYMbyoAF1GsOHQPXS6HZOKozB5m+lbMiU=", "contact"=>{"date_met"=>{"month"=>"9", "day"=>"14", "year"=>"2009"}, "city"=>"", "company"=>"Someplace", "name"=>"Kristian", "married"=>"0", "notes"=>"", "address_1"=>"Somewhere", "age"=>"120", "state"=>""}, "id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mContact Load (0.1ms)[0m   [0mSELECT "contacts".id FROM "contacts" WHERE ("contacts"."name" = 'Kristian' AND "contacts".id <> 1) LIMIT 1[0m
+Rendering contacts/edit
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 301ms (View: 290, DB: 2) | 200 OK [http://localhost/contacts/1-kristian]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2009-09-14 12:55:20) [PUT]
+  Parameters: {"page_path"=>"contacts/edit", "authenticity_token"=>"ZOGlrMa7P4cYMbyoAF1GsOHQPXS6HZOKozB5m+lbMiU=", "contact"=>{"date_met"=>{"month"=>"9", "day"=>"14", "year"=>"2009"}, "city"=>"", "company"=>"Someplace", "name"=>"Kristian", "married"=>"0", "notes"=>"", "address_1"=>"Somewhere", "age"=>"65", "state"=>""}, "id"=>"1-kristian"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;36;1mContact Load (0.1ms)[0m   [0;1mSELECT "contacts".id FROM "contacts" WHERE ("contacts"."name" = 'Kristian' AND "contacts".id <> 1) LIMIT 1[0m
+  [4;35;1mContact Update (0.3ms)[0m   [0mUPDATE "contacts" SET "updated_at" = '2009-09-14 10:55:20', "age" = 65, "address_1" = 'Somewhere' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/contacts/1-kristian
+Completed in 16ms (DB: 2) | 302 Found [http://localhost/contacts/1-kristian]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ContactsController#show (for 127.0.0.1 at 2009-09-14 12:55:20) [GET]
+  Parameters: {"id"=>"1-kristian"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM "contacts" WHERE ("contacts"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 194ms (View: 191, DB: 1) | 200 OK [http://localhost/contacts/1-kristian]

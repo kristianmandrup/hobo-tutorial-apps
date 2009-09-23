@@ -1,0 +1,28 @@
+<page title="Home"> 
+  <body: class="front-page"/> 
+  <content:> 
+    <h2>Cooperative State Research, Education and Extension Service</h2> 
+    <p>Main content goes here...</p> 
+  </content:> 
+  <aside2:> 
+ 
+    <nav-panel> 
+      <heading:>Grants</heading:> 
+      <items:> 
+        <nav-item href="/">National Research Initiative</nav-item> 
+        <nav-item href="/">Small Business Innovation Research</nav-item> 
+        <nav-item href="/">More...</nav-item> 
+      </items:> 
+    </nav-panel> 
+ 
+    <nav-panel> 
+      <heading:>Quick Links</heading:> 
+      <items:> 
+        <nav-item href="/">A-Z Index</nav-item> 
+        <nav-item href="/">Local Extension Office</nav-item> 
+        <nav-item href="/">Jobs and Opportunities</nav-item> 
+      </items:> 
+    </nav-panel> 
+ 
+  </aside2:> 
+</page>

@@ -1,0 +1,5 @@
+<show-page>
+	<content-body:>
+		<a action="edit" >Edit My Country</a><br/>
+	</content-body:>
+</show-page>

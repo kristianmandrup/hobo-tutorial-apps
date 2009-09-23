@@ -1,0 +1,16 @@
+<index-page >
+	<collection: replace>
+		<div>
+			<table-plus fields="this, categories.count, categories, country"/>
+	    </div>
+	  </collection:>
+</index-page>
+
+
+
+
+
+
+
+
+
